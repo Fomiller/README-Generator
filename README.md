@@ -1,7 +1,7 @@
 
 # README
-## Languages
-![Commits](https://img.shields.io/github/last-commit/Fomiller/README-Generator)  
+![Commits](https://img.shields.io/github/last-commit/Fomiller/README-Generator)
+## Languages  
 ![JavaScript](https://img.shields.io/badge/language-JavaScript-red)&ensp;![Node.js](https://img.shields.io/badge/language-Node.js-blue)&ensp;
 ## Description
 README-Generator is a node application for creating clear and well structured README files for your applications.
