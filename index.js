@@ -55,7 +55,6 @@ async function init() {
                 {name: "License", checked: true},
                 {name: "Credits", checked: true},
                 {name: "Badges", checked: true},
-                {name: "Test", checked: true},
                 {name: "Contact", checked: true},
             ],
         },
@@ -111,7 +110,6 @@ async function init() {
         "gitData": githubInfo.data,
         "questionData": results,  
     }
-    console.log(data)
     var markDown = await md.generateMarkdown(data);
     writeToFile(results.title, markDown);6
 
