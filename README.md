@@ -1,33 +1,35 @@
 
-# README.md Generator
-![badge](https://img.shields.io/github/downloads/Fomiller/README-Generator/total)
+# README
+## Languages
+![Commits](https://img.shields.io/github/last-commit/Fomiller/README-Generator)  
+![JavaScript](https://img.shields.io/badge/language-JavaScript-red)&ensp;![Node.js](https://img.shields.io/badge/language-Node.js-blue)&ensp;
 ## Description
-this application will create a README.md for your app.
+README-Generator is a node application for creating clear and well structured README files for your applications.
 
 ## Table of Contents
-* Installation
-* Usage
-* Contributing
-* License
-* Credits
-* Badges
-* Contact
+* [Installation](#Installation)
+* [Usage](#Usage)
+* [Contributing](#Contributing)
+* [License](#License)
+* [Languages](#Languages)
+* [Contact](#Contact)
 
 ## Installation
-clone from the GitHub repo
+Clone from the github repository, and install node modules.
 
 ## Usage
-node run index.js
+Inside the root directory in Terminal run the command: node index.js
 
 ## License
 MIT
 
 ## Contributing
-Nothing
+Anyone can contriute and submit pull requests.
 
 ## Contact
 Forrest Miller
 
-![GitHub Avatar](https://avatars1.githubusercontent.com/u/36345389?v=4)  
+<img src="https://avatars1.githubusercontent.com/u/36345389?v=4" alt="Fomiller" width="150" height="150" />
 
-[Blog](http://www.forrestmillerdesign.com/)
+
+[Click here to visit my website](http://www.forrestmillerdesign.com/)
