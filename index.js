@@ -3,8 +3,6 @@ const axios = require("axios");
 const inquirer = require("inquirer");
 const api = require("./utils/api.js");
 const md = require("./utils/generateMarkdown.js");
-// array of questions for the user to answer
-// creates values we will use later
 
 
 async function init() {
@@ -53,15 +51,14 @@ async function init() {
                 {name: "Usage", checked: true},
                 {name: "Contributing", checked: true},
                 {name: "License", checked: true},
-                {name: "Credits", checked: true},
-                {name: "Badges", checked: true},
+                {name: "Languages", checked: true},
                 {name: "Contact", checked: true},
             ],
         },
         {
             type: "checkbox",
             message: "What Languages are you using?",
-            name: "badges",
+            name: "languages",
             choices: [
                 {name: "HTML", checked:true},
                 {name: "CSS", checked:true},
@@ -81,7 +78,7 @@ async function init() {
         {
             type: "input",
             message: "Who built this application?",
-            name: "authors"
+            name: "contact"
         },
         {
             type: "list",
