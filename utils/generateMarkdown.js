@@ -10,47 +10,32 @@ const createTable = function(data) {
 
 return `
 # ${questionData.title}
+![badge](https://img.shields.io/github/downloads/${gitData.login}/${questionData.repo}/total)
 ## Description
-${data.description}
+${questionData.description}
 
 ## Table of Contents
 ${createTable(questionData.contents)}
 
 ## Installation
-${data.installation}
+${questionData.installation}
 
 ## Usage
-${data.usage}
+${questionData.usage}
 
 ## License
-${data.License}
+${questionData.license}
 
 ## Contributing
-${data.contribution}
+${questionData.contributing}
 
+## Contact
+${questionData.authors}
+
+![GitHub Avatar](${gitData.avatar_url})  
+
+[Blog](${gitData.blog})
 `;
 };
 
 module.exports = {generateMarkdown};
-
-'Installation',
-'Usage',
-'Contributing',
-'License',
-'Credits',
-'Badges',
-'Test',
-'Contact'
-// # ${data.title}
-// ## ${gitData.login}
-// ### ${gitData.blog}
-
-// ## Table of contents
-// ## Credits
-// * ${data.Credits[0]}
-// * ${data.Credits[1]}
-// * ${data.Credits[2]}
-// ## languages
-// * ${data.badges}
-// * ${data.badges}
-// * ${data.badges}
