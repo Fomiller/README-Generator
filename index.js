@@ -26,8 +26,23 @@ async function init() {
         },
         {
             type: "input",
+            message: "What is name of your GitHub repositry?",
+            name: "repo"
+        },
+        {
+            type: "input",
             message: "Write a description of your project.",
             name: "description"
+        },
+        {
+            type: "input",
+            message: "What do users need to know about installing your application?",
+            name: "installation"
+        },
+        {
+            type: "input",
+            message: "How does a user use your application?",
+            name: "usage"
         },
         {
             type: "checkbox",
@@ -98,7 +113,7 @@ async function init() {
     }
     console.log(data)
     var markDown = await md.generateMarkdown(data);
-    writeToFile(results.title, markDown);
+    writeToFile(results.title, markDown);6
 
 
 }
