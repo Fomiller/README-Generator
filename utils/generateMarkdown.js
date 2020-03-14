@@ -6,24 +6,27 @@ const { questionData } = data;
 // function to loop through questionData.content to output table of contents.
 const createTable = function(data) {
   // create new array with string literals using map()
-  const array2 = data.map(element => `* ${element}`);
+  const array2 = data.map(element => `* [${element}](#${element})`);
   // create table variable that is string of array2 values each value starts a new line.
   var table = array2.join("\n");
   return table;
 };
 
 const createBadges = function(data) {
+  // array of colors for badges
   let colorsArray = ["brightgreen","yellow","orange","red","blue","blueviolet","ff69b4"]
-  let ranNum = Math.floor(Math.random()*7);
-  const array2 = data.map(element => `![${element}](https://img.shields.io/badge/language-${element}-${colorsArray[ranNum]})&ensp;`);
+  // maps the original array of languages to markdown format, create a random number to access the color array, adds tabs to each so they stay on one line.
+  const array2 = data.map(element => `![${element}](https://img.shields.io/badge/language-${element}-${colorsArray[Math.floor(Math.random()*7)]})&ensp;`);
+  // join all badges into a string.
   var badges = array2.join("");
   return badges;
 }
 
 return `
 # ${questionData.title}
-![Downloads](https://img.shields.io/github/downloads/${gitData.login}/${questionData.repo}/total)  
-${createBadges(questionData.badges)}
+![Commits](https://img.shields.io/github/last-commit/${gitData.login}/${questionData.repo})  
+## Languages
+${createBadges(questionData.languages)}
 ## Description
 ${questionData.description}
 
@@ -43,7 +46,7 @@ ${questionData.license}
 ${questionData.contributing}
 
 ## Contact
-${questionData.authors}
+${questionData.contact}
 
 <img src="${gitData.avatar_url}" alt="${gitData.login}" width="150" height="150" />
 
