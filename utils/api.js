@@ -2,31 +2,12 @@ const fs = require("fs");
 const axios = require("axios");
 const inquirer = require("inquirer");
 
-
-
-
-
 const api = {
-    getUser({ username }){
-        const queryUrl = `https://api.github.com/users/${username}`;
-            axios
-              .get(queryUrl)
-              .then(function(res) {
-                console.log(res)
-                // console.log(res.data)
-                // console.log(res.data.avatar_url)
-                // console.log(res.data.email)
-              })
-              .catch(function (error) {
-              // handle error
-              console.log(error);
-        })
-    }
-};      
-
-    
-
-
+  async getUser(results){
+    const queryUrl = `https://api.github.com/users/${results.username}`;
+    return await axios.get(queryUrl);
+  }
+};     
 
 module.exports = api;
-  
+
