@@ -1,11 +1,15 @@
 function generateMarkdown(data) {
+// store api response object
 const { gitData } = data;
+// store inquirer response object 
 const { questionData } = data;
-
+// function to loop through questionData.content to output table of contents.
 const createTable = function(data) {
-  const array2 = data.map(element => `* ${element}`)
-  var table = array2.join("\n")
-  return table
+  // create new array with string literals using map()
+  const array2 = data.map(element => `* ${element}`);
+  // create table variable that is string of array2 values each value starts a new line.
+  var table = array2.join("\n");
+  return table;
 };
 
 return `
@@ -32,9 +36,10 @@ ${questionData.contributing}
 ## Contact
 ${questionData.authors}
 
-![GitHub Avatar](${gitData.avatar_url})  
+<img src="${gitData.avatar_url}" alt="${gitData.login}" width="150" height="150" />
 
-[Blog](${gitData.blog})
+
+[Click here to visit my website](${gitData.blog})
 `;
 };
 
