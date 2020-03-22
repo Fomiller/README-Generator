@@ -24,7 +24,7 @@ async function init() {
         },
         {
             type: "input",
-            message: "What is name of your GitHub repositry?",
+            message: "What is the GitHub repositry URL for this project?",
             name: "repo"
         },
         {
